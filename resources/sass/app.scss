@@ -18,7 +18,7 @@ body{
     }
     .container{
         max-width: 800px;
-        margin: 5rem auto 1rem;
+        margin: 1.55rem auto;
         padding: 2rem 0;
         border: 1px solid black;
         box-shadow: inset 0px 0px 37px 4px rgba(0,0,0,0.35);
@@ -55,11 +55,15 @@ body{
                 justify-content: space-between;
                 font-size: 1.5rem;
                 margin: 0.5rem auto;
-                background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 208, 0));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                animation: gradientLi .5s ease infinite;
+                
+                .movie-title{
+                    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 208, 0));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: gradientLi .5s ease infinite;                    
+                }
 
+                
                 @keyframes gradientLi{
                     0% {
                         background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 208, 0));
@@ -87,14 +91,97 @@ body{
                         -webkit-text-fill-color: transparent;
                     }
                 }
-
+                
                 .movie-voto{
                     align-self: flex-start;
-                    background: -webkit-linear-gradient(rgb(255, 251, 0), rgb(255, 251, 0));
+                    background: -webkit-linear-gradient(rgb(255, 251, 0), rgb(189, 14, 233));
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
         }
+    }
+    
+    li {
+        position: relative;
+        display: inline-block;
+      }
+      
+      li .tooltiptext {
+        visibility: hidden;
+            max-width: fit-content;
+            background: -webkit-linear-gradient(rgb(255, 255, 255), #000851,rgb(255, 255, 255));
+            -webkit-background-clip: border-box;
+            -webkit-text-fill-color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 0 2rem;
+            position: absolute;
+            z-index: 1;
+      }
+      
+      li:hover .tooltiptext {
+        visibility: visible;
+      }
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background: linear-gradient(180deg, rgba(242,203,0,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(242,203,0,1) 100%);
+    // box-shadow: inset 0px 0px 37px 4px rgba(0,0,0,0.50);
+    ul{
+        width: 800px;
+        height: 5rem;
+        margin: 0 auto;
+        color: black;
+        text-transform: uppercase;
+        display: flex;
+        justify-content:space-between;
+        li{
+            height:100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 8px solid transparent;
+            &:hover{
+                border-bottom: 8px solid #fcfcfc;
+            }
+        }
+    }
+}
+
+footer{
+    background-color:rgba(242,203,0,1);
+    ul{
+        height: 2rem;
+        color: black;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        .tooltip {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 1px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 0%;
+
+          }
+          
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
     }
 }

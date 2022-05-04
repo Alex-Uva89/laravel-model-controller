@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+@extends('template.templatePage')
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
+@section('title', 'Movie list')
+
+@section('content')
 <body>
     <div class="container">
 
@@ -15,8 +10,10 @@
         
         <ul>
             @foreach ($movie as $movie)
-                <li>
-                    <span> {{ $movie->title }}</span>
+                <li class="tooltip">
+                    <span class="movie-title">{{ $movie->title }}</span>
+                    <span class="tooltiptext"> Titolo originale: {{ $movie->original_title }} </span>
+                
                     <span class="movie-voto">Gradimento: {{ $movie->vote }} </span>
                 </li>
             @endforeach
@@ -24,4 +21,5 @@
     </div>
 </body>
 </html>
+@endsection
 
