@@ -195,12 +195,12 @@ body .container ul li .movie-voto {
   -webkit-text-fill-color: transparent;
 }
 
-body li {
+body .container li {
   position: relative;
   display: inline-block;
 }
 
-body li .tooltiptext {
+body .container li .tooltiptext {
   visibility: hidden;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -215,7 +215,7 @@ body li .tooltiptext {
   z-index: 1;
 }
 
-body li:hover .tooltiptext {
+body .container li:hover .tooltiptext {
   visibility: visible;
 }
 
