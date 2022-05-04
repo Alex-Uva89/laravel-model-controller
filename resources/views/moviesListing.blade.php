@@ -17,7 +17,7 @@
             @foreach ($movie as $movie)
                 <li>
                     <span> {{ $movie->title }}</span>
-                    <span>Voto: {{ $movie->vote }}</span>
+                    <span class="movie-voto">Gradimento: {{ $movie->vote }} </span>
                 </li>
             @endforeach
         </ul>
